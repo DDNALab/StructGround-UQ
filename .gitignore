@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Datasets and images
+data/
+datasets/
+dacl10k/
+*.jpg
+*.jpeg
+*.png
+*.zip
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Cache
+.cache/
