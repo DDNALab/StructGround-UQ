@@ -336,3 +336,91 @@ The dataset includes usable polygon annotations for training and validation imag
 
 Source-group information, licensing discrepancies, and coordinate deviations have been documented for further review before finalizing the experimental preprocessing protocol.
 
+
+
+
+
+\## Frozen Research Splits
+
+
+
+\- Dataset: Hugging Face dacl10k
+
+\- Eligible images: 7,910 labeled images
+
+\- Original train: 6,935 images
+
+\- Original validation: 975 images
+
+\- Original testdev: excluded because segmentation ground truth is unavailable
+
+\- Random seed: 2026
+
+\- Split strategy: image-level random assignment
+
+\- Train: 5,537 images (70%)
+
+\- Calibration: 1,186 images (approximately 15%)
+
+\- Test: 1,187 images (approximately 15%)
+
+
+
+\### Source and Inspection Grouping
+
+
+
+No reliable source-level or inspection-level grouping
+
+identifier was established during the Week 1 metadata review.
+
+
+
+Therefore, each unique image name was treated as one
+
+group when creating the frozen splits.
+
+
+
+Limitation: image-level splitting does not guarantee
+
+independence between visually similar images or images
+
+from the same inspection.
+
+
+
+\### Reproducibility
+
+
+
+Frozen split files:
+
+\- splits/train.txt
+
+\- splits/calib.txt
+
+\- splits/test.txt
+
+
+
+SHA-256 manifest:
+
+\- splits/sha256.txt
+
+
+
+The split files must not be regenerated or modified.
+
+The test split is reserved for final evaluation and
+
+must not be inspected to guide development decisions.
+
+
+
+Bounding-box and occupancy preprocessing was completed
+
+before these research splits were frozen.
+
+
+
