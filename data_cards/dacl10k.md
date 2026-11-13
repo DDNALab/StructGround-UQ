@@ -464,3 +464,62 @@ The mapping must remain unchanged throughout subsequent
 experiments. The original string labels remain authoritative.
 
 
+
+
+## Week 3: License Review for Prediction Score Caches
+
+Review date: November 13, 2026
+
+### License Sources
+
+1. Original dacl10k toolkit:
+   https://github.com/phiyodr/dacl10k-toolkit
+
+   Stated dataset license: CC BY-NC 4.0.
+
+2. Hugging Face Voxel51/dacl10k:
+   https://huggingface.co/datasets/Voxel51/dacl10k
+
+   Listed license: CC BY 4.0.
+
+3. Hugging Face metadata.json:
+   https://huggingface.co/datasets/Voxel51/dacl10k/blob/main/metadata.json
+
+   Dataset description references CC BY-NC 4.0.
+
+### Finding
+
+The published license statements are inconsistent.
+
+For StructGround-UQ, use the more conservative
+CC BY-NC 4.0 terms until clarified with the PI
+or original dataset rights holder.
+
+CC BY-NC 4.0 generally allows copying and adapting
+the dataset for noncommercial research, subject
+to attribution and other applicable conditions.
+
+Local storage of model prediction score maps is
+not explicitly prohibited by these terms.
+
+However, the license does not specifically address
+the redistribution of model-generated score maps.
+
+### Project Decision
+
+- Local score-map caching: permitted for noncommercial
+  research under the conservative interpretation.
+- Public redistribution of score caches: on hold
+  pending clarification.
+- Store score caches outside the Git repository.
+- Do not publicly distribute source images,
+  original masks, or image-derived visual outputs
+  without confirming applicable permissions.
+- Cite the original dacl10k authors and license.
+- Ask the PI to review the license discrepancy
+  before releasing derived dataset artifacts.
+
+Status: Local research use can proceed.
+Public distribution requires further review.
+
+
