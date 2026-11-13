@@ -424,3 +424,43 @@ before these research splits were frozen.
 
 
 
+
+
+## StructGround-UQ Class ID Mapping
+
+The Hugging Face dacl10k polygon annotations use string
+class labels. No authoritative numeric class-ID mapping
+has been established from the inspected annotation records.
+
+For reproducibility, StructGround-UQ assigns the following
+project-specific IDs in alphabetical order.
+
+| Project ID | Exact Class Name |
+|---|---|
+| 0 | ACrack |
+| 1 | Bearing |
+| 2 | Cavity |
+| 3 | Crack |
+| 4 | Drainage |
+| 5 | EJoint |
+| 6 | Efflorescence |
+| 7 | ExposedRebars |
+| 8 | Graffiti |
+| 9 | Hollowareas |
+| 10 | JTape |
+| 11 | PEquipment |
+| 12 | Restformwork |
+| 13 | Rockpocket |
+| 14 | Rust |
+| 15 | Spalling |
+| 16 | WConccor |
+| 17 | Weathering |
+| 18 | Wetspot |
+
+These IDs are project-defined and must not be interpreted
+as official dataset category IDs.
+
+The mapping must remain unchanged throughout subsequent
+experiments. The original string labels remain authoritative.
+
+
