@@ -243,8 +243,13 @@ def load_model():
             + str(sorted(observed - allowed))
         )
 
+    # The checkpoint stores the wrapper under __main__.SegModel.
+    # When this module is imported by run_test_scoring.py, its real
+    # import path is run_scoring.SegModel. Explicitly map the name.
     approved_types = [
-        resolve_global(name)
+        (SegModel, "__main__.SegModel")
+        if name == "__main__.SegModel"
+        else resolve_global(name)
         for name in sorted(observed)
     ]
 
