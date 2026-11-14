@@ -190,5 +190,123 @@ Reproducibility summaries:
 
 \- results/week3\_repro\_test.json
 
+## Week 3 — Step 12: Gate G1 Assessment
 
+
+
+\*\*Decision: REVISE\*\*
+
+
+
+\### 1. Positive images for mask calibration
+
+
+
+All 19 classes have at least 50 positive calibration images.
+
+
+
+\- Spalling: 588
+
+\- Rust: 580
+
+\- Weathering: 468
+
+\- Rockpocket: 50 (smallest class count)
+
+
+
+\*\*Assessment:\*\* Sufficient positive examples exist to begin calibration feasibility studies, although adequacy for a specific statistical risk guarantee has not yet been established.
+
+
+
+\### 2. Baseline IoU and reproducibility
+
+
+
+The mean of the best per-class calibration IoUs across the 25 frozen thresholds is 0.5105. This is an optimistic descriptive diagnostic, not an unbiased performance estimate.
+
+
+
+Examples:
+
+\- Bearing: 0.8388
+
+\- EJoint: 0.7792
+
+\- Drainage: 0.7649
+
+\- Cavity: 0.1462
+
+\- Rockpocket: 0.1744
+
+\- Crack: 0.2642
+
+
+
+Quality varies considerably by class.
+
+
+
+Reproducibility checks passed:
+
+\- Calibration: 1,186/1,186 identical score-file hashes
+
+\- Test: 1,187/1,187 identical score-file hashes
+
+\- Hash mismatches: 0
+
+
+
+No test performance metrics were inspected or used in this assessment.
+
+
+
+\### 3. Class mapping
+
+
+
+All 19 class names have documented checkpoint-channel mappings.
+
+
+
+The channel order used in `experiments/compute\_iou.py` matches `data\_cards/segmenter.md`.
+
+
+
+Mapping consistency check: PASS.
+
+
+
+\### 4. Gate G1 decision and rationale
+
+
+
+\*\*G1: REVISE\*\*
+
+
+
+The baseline is reproducible, all classes have positive calibration examples, and the implemented mappings are consistent.
+
+
+
+However, baseline IoU is weak for several classes, and possible overlap between the checkpoint's training images and the frozen evaluation splits remains unresolved. Model preprocessing compatibility also requires validation.
+
+
+
+\### 5. Proposed revisions before Week 4
+
+
+
+1\. Resolve and document checkpoint training-data overlap with the professor. If necessary, use a checkpoint trained exclusively on the frozen training split.
+
+2\. Verify inference preprocessing and compatibility against the original model implementation.
+
+3\. Review whether weakly performing classes remain suitable for the planned calibration experiments.
+
+4\. Preserve the frozen threshold grid and avoid using test IoU for model or threshold selection.
+
+
+
+Proceed to Week 4's certification experiments only after the evaluation protocol is confirmed.
 
