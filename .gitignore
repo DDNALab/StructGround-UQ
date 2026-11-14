@@ -21,3 +21,8 @@ dacl10k/
 
 # Cache
 .cache/
+
+
+# Local segmentation score caches
+results/scores/calib/*.npy
+results/scores/calib/*.tmp

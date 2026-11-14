@@ -1,0 +1,7 @@
+
+# StructGround-UQ Week 3 scoring configuration
+# Fixed before real checkpoint inference
+seed: 2026
+split: calib
+num_classes: 19
+output_dtype: float32
