@@ -30,3 +30,6 @@ results/scores/calib/*.tmp
 
 # Generated calibration scores and manifests
 /results/scores/
+
+
+/results/iou_test.csv
