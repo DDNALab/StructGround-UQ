@@ -26,3 +26,7 @@ dacl10k/
 # Local segmentation score caches
 results/scores/calib/*.npy
 results/scores/calib/*.tmp
+
+
+# Generated calibration scores and manifests
+/results/scores/
