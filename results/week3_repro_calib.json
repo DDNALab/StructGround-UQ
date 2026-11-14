@@ -1,0 +1,11 @@
+{
+  "split": "calib",
+  "seed": 2026,
+  "images": 1186,
+  "matching_hashes": 1186,
+  "mismatching_hashes": 0,
+  "reproducible": true,
+  "rerun_elapsed_seconds": 812.62,
+  "gpu": "NVIDIA RTX 2000 Ada Generation",
+  "pytorch": "2.9.1+cu128"
+}
